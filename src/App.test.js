@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import App from './App';
 import Player from "./components/Player/Player";
 import PlayersList from './components/PlayersList/PlayersList';
@@ -48,6 +48,6 @@ it("should remove player from app state", () => {
 
 	const players = app.state("players");
 
-	expect(players.length).toEqual(players.length - 1);
+	expect(players.length).toEqual(1);
 
 });
