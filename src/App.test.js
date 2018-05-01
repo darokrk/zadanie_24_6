@@ -13,7 +13,7 @@ it('should update player score', () => {
         name: 'Oko',
         score: 5
       }
- ];
+  ];
 
   const playerScoreExpected = 10;
 
