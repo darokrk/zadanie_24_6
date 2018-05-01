@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 import App from './App';
 import Player from "./components/Player/Player";
 import PlayersList from './components/PlayersList/PlayersList';
+import AddPlayer from './components/AddPlayer/AddPlayer';
 
 it('renders without crashing', () => {
   shallow(<App />);
@@ -36,5 +37,17 @@ it("should add Darek to app state", () => {
 	expect(players.length).toEqual(3);
 	expect(players[2].name).toEqual("Darek");
 	expect(players[2].score).toEqual(0);
+
+});
+
+it("should remove player from app state", () => {
+	const app = mount(<App />);
+	const player = app.find(Player).first();
+	const onPlayerRemove = player.find(".Player__button").at(2);
+	onPlayerRemove.simulate("click")
+
+	const players = app.state("players");
+
+	expect(players.length).toEqual(players.length - 1);
 
 });

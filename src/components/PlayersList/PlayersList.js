@@ -1,6 +1,6 @@
 import React from 'react';
 import Player from '../Player/Player';
-//import './PlayersList.css';
+import './PlayersList.css';
 
 const PlayersList = (props) => (
     <ul className="PlayersList">
@@ -10,6 +10,7 @@ const PlayersList = (props) => (
                 name={player.name}
                 score={player.score}
                 onPlayerScoreChange={(points) => props.onScoreUpdate(i, points)}
+                onPlayerRemove={() => props.onPlayerRemove(i)}
             />)
         )}
     </ul>
