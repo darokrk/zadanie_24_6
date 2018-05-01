@@ -1,0 +1,17 @@
+.Player {
+    list-style-type: none;
+    margin: 80px;
+}
+span {
+    margin: 10px;
+    padding: 30px;
+    background-color: #ffa939; 
+    color: #a53e4f;
+    transition: .4s;
+}
+
+.Player__button:hover {
+    background-color: #a53e4f;
+    color: #E8DDCE;
+    cursor: pointer;
+}
